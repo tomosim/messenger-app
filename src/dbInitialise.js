@@ -3,9 +3,7 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const { apiKey, authDomain, databaseURL, projectId } =
-  process.env.NODE_ENV === "production"
-    ? process.env
-    : require("../configpath");
+  process.env.NODE_ENV === "production" ? process.env : require("../config");
 
 const config = {
   apiKey,

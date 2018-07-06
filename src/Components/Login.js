@@ -1,5 +1,5 @@
 import React from "react";
-import { auth } from "../config";
+import { auth } from "../dbInitialise";
 import * as api from "../api";
 
 class Login extends React.Component {
