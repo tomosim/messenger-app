@@ -4,7 +4,7 @@ import Chatroom from "./Components/Chatroom";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import "./App.css";
-import { auth } from "./config";
+import { auth } from "./dbInitialise";
 
 class App extends Component {
   state = { userName: "", login: true };
