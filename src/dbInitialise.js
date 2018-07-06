@@ -13,7 +13,7 @@ const config = {
 };
 
 if (!firebase.apps.length) {
-  firebase.initializeApp({});
+  firebase.initializeApp(config);
 }
 
 export const db = firebase.firestore();
