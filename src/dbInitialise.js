@@ -3,7 +3,7 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const { apiKey, authDomain, databaseURL, projectId } =
-  process.env.NODE_ENV === "production" ? process.env : require("../config");
+  process.env.NODE_ENV === "production" ? process.env : require("./config");
 
 const config = {
   apiKey,
@@ -12,7 +12,9 @@ const config = {
   projectId
 };
 
-firebase.initializeApp(config);
+if (!firebase.apps.length) {
+  firebase.initializeApp({});
+}
 
 export const db = firebase.firestore();
 
