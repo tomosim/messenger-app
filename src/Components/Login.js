@@ -25,6 +25,10 @@ class Login extends React.Component {
       .catch(err => this.setState({ errMsg: err.message }));
   };
 
+  handleKeyPress = e => {
+    e.key === "Enter" ? this.clickHandler() : null;
+  };
+
   render() {
     return (
       <div className="login">
@@ -34,6 +38,7 @@ class Login extends React.Component {
           value={this.state.email}
           placeholder="username"
           onChange={this.inputHandler}
+          onKeyPress={this.handleKeyPress}
         />
         <br />
         <br />
@@ -44,6 +49,7 @@ class Login extends React.Component {
           placeholder="password"
           type="password"
           onChange={this.inputHandler}
+          onKeyPress={this.handleKeyPress}
         />
         <br />
         <br />

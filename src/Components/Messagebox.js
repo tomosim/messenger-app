@@ -13,9 +13,10 @@ class Messagebox extends React.Component {
           value={this.state.newMessage}
           placeholder="your message here..."
           onChange={this.handleInput}
+          onKeyPress={this.handleKeyPress}
         />
         <button id="sendButton" onClick={this.handleClick}>
-          Send
+          {">"}
         </button>
       </div>
     );
@@ -23,6 +24,10 @@ class Messagebox extends React.Component {
 
   handleInput = e => {
     this.setState({ newMessage: e.target.value });
+  };
+
+  handleKeyPress = e => {
+    e.key === "Enter" ? this.handleClick() : null;
   };
 
   handleClick = () => {
