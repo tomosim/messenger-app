@@ -1,4 +1,4 @@
-import { db } from "./dbInitialise";
+import { db } from "./config";
 
 const checkForErrors = (checks, data) => {
   const errors = [];

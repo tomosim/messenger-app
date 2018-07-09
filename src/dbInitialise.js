@@ -5,7 +5,7 @@ import "firebase/auth";
 console.log(process.env);
 
 const { apiKey, authDomain, databaseURL, projectId } =
-  process.env.NODE_ENV == "production" ? process.env : require("./config");
+  process.env.NODE_ENV === "production" ? process.env : require("./config");
 
 const config = {
   apiKey,

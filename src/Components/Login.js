@@ -1,5 +1,5 @@
 import React from "react";
-import { auth } from "../dbInitialise";
+import { auth } from "../config";
 import * as api from "../api";
 
 class Login extends React.Component {
@@ -60,7 +60,7 @@ class Login extends React.Component {
         <br />
         {this.state.errMsg && <p id="err">{this.state.errMsg}</p>}
         <hr />
-        <p>New user?</p>
+        <p className="loginCard">New user?</p>
         <button onClick={this.props.toggleLoginRegister}>Register Here!</button>
       </div>
     );

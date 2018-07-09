@@ -148,4 +148,9 @@
 
 hr {
   margin: 0 20px;
+  color: rgb(255, 188, 43);
+}
+
+#loginCard {
+  color: rgb(255, 188, 43);
 }
