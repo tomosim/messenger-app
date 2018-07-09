@@ -2,9 +2,10 @@ import firebase from "firebase";
 import "firebase/firestore";
 import "firebase/auth";
 
-console.log(process.env.NODE_ENV);
+console.log(process.env);
 
-const { apiKey, authDomain, databaseURL, projectId } = process.env;
+const { apiKey, authDomain, databaseURL, projectId } =
+  process.env.NODE_ENV == "production" ? process.env : require("./config");
 
 const config = {
   apiKey,
